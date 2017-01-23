@@ -1,0 +1,4 @@
+# Some cron jobs examples to feed an rrdtool database and make a graph. 
+# 45 18 * * * /root/rrd-test/create-db.sh
+*/5 * * * * /root/rrd-test/feed-db.py
+*/10 * * * * /root/graficar-temp.sh
