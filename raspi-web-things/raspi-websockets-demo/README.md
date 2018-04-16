@@ -17,7 +17,7 @@ The following components and software were used:
 ## Versión en Español
 
 Este pequeño proyecto, consiste en una página web que muestra un gráfico en tiempo real, con valores de temperatura tomados de un sensor, y alimentado con 
-"websockets". Está basado en Chart.js (javascript), la librería websockets y el microframework Bottle, para Python!.
+"websockets". Está basado en Chart.js (JavaScript), la librería websockets y el microframework Bottle, para Python!.
 
 ### Componentes y software utilizado
 

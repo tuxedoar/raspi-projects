@@ -1,4 +1,3 @@
-#!/home/pi/websockets-demo/python-websockets/env/bin/python3
 
 import sys
 import re

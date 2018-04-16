@@ -97,7 +97,7 @@
 
 
     
-  <!-- Setup the connection to the websocket! -->
+            // Setup the connection to the websocket server!. 
 
             // Replace with your IP address on this line!!.
             var ws = new WebSocket("ws://192.168.0.20:5678/");
@@ -121,7 +121,7 @@
             // Keep 20 values in the tempChart and remove the oldest data point.
             if (tempChart.data.datasets[0].data.length > 20) {
               tempChart.data.datasets[0].data.splice(0, 1);   // remove first data point
-              tempChart.data.labels.splice(0, 1);             // remove first label. pop() removes last element last element from array!.
+              tempChart.data.labels.splice(0, 1);             // remove first label. The pop() method, removes last element last element from array!.
              }
 
             tempChart.update();
@@ -129,7 +129,7 @@
 
       };
 
-       <!-- End of the jQuery function!. -->
+       // End of the jQuery function!.
         });
         </script>
 
