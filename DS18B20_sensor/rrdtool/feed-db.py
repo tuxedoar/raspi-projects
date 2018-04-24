@@ -4,19 +4,16 @@ import re
 import rrdtool 
 
 dsaddr="/sys/bus/w1/devices/28-0215821986ff/w1_slave"
-file = open(dsaddr, 'r')
 
 try:
-        for linea in file.readlines():
-                estado = re.match("YES", "YES")
-                if estado:
-#                               print "Sensor encontrado..."
-                        temp = re.findall('[t]\=\d+', linea)
-                        if temp:
-                                temp = temp[0].split('=')
-                                temp = int(float(temp[1])) / 1000.00
-                                rrdtool.update('/path/to/temperatures.rrd', 'N:%.2f' % (temp))
-                        file.close()
-except:
-        file.close()
-          
+  with open(dsaddr, 'r') as file:
+    for line in file.readlines():
+      state = re.match("YES", "YES")
+      if state:
+        temp = re.findall('[t]\=\d+', line)
+        if temp:
+          temp = temp[0].split('=')
+          temp = int(float(temp[1])) / 1000.00
+          rrdtool.update('/path/to/temperatures.rrd', 'N:%.2f' % (temp))
+except Exception as e:
+  print "An error ocurred: %s " % (e)
